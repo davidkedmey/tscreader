@@ -1,0 +1,701 @@
+@charset "UTF-8";
+html {
+  font-size: 18px; /* Default font size (1rem) */
+  line-height: 1.6; /* Optimal line height for readability */
+}
+
+body {
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #F2F2F2;
+  color: #474747;
+  font-size: 1rem; /* Equal to 16px, scales with user settings */
+  line-height: inherit;
+  text-rendering: optimizeLegibility; /* Improves font rendering for modern browsers */
+  -webkit-font-smoothing: antialiased; /* Enhances font rendering on WebKit browsers */
+}
+body h2:not(.formkit-overlay h2) {
+  background-color: #F2F2F2;
+}
+body img.dark {
+  display: none;
+}
+body.dark {
+  background-color: #181A1B;
+  color: #BBB5AC;
+}
+body.dark img.daylight {
+  display: none;
+}
+body.dark img.dark {
+  display: inline-block;
+}
+body.dark h2:not(.formkit-overlay h2) {
+  background: transparent;
+}
+
+#right {
+  /* Firefox */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: rgba(71, 71, 71, 0.3) #F2F2F2; /* thumb color track color */
+  scrollbar-width: thin;
+}
+#right::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+}
+#right::-webkit-scrollbar-thumb {
+  border-radius: 4px; /* rounded corners */
+}
+#right::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+#right::-webkit-scrollbar-thumb {
+  background: #F2F2F2; /* darker gray for the thumb */
+  border-radius: 4px; /* rounded corners */
+}
+#right::-webkit-scrollbar-thumb:hover {
+  background: #555; /* slightly lighter on hover */
+}
+body.dark #right {
+  /* Firefox */
+  scrollbar-color: #181A1B #181A1B; /* thumb color track color */
+  scrollbar-width: thin;
+}
+body.dark #right::-webkit-scrollbar-track {
+  background: #181A1B;
+}
+body.dark #right::-webkit-scrollbar-thumb {
+  background: #181A1B; /* darker gray for the thumb */
+  border-radius: 4px; /* rounded corners */
+}
+body.dark #right::-webkit-scrollbar-thumb:hover {
+  background: #555; /* slightly lighter on hover */
+}
+
+div.chapter {
+  margin: 40px 0;
+}
+
+.section {
+  margin: 20px 0;
+}
+
+.preamble {
+  text-align: center;
+  display: flex;
+}
+.preamble .cover {
+  width: 550px;
+  background: #e9e9e9;
+  padding-bottom: 2em;
+  position: relative;
+  z-index: 9;
+}
+body.dark .preamble .cover {
+  background: #282828;
+}
+.preamble .cover img {
+  width: 100%;
+  height: auto;
+}
+.preamble .cover h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  text-transform: uppercase;
+  position: initial;
+  cursor: default;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #e9e9e9;
+}
+body.dark .preamble .cover h2 {
+  background: #282828;
+}
+.preamble .cover h2 em {
+  font-size: 50%;
+  font-style: normal;
+  line-height: 1em;
+}
+.preamble .cover .subtitle {
+  margin-top: -2.5em;
+}
+.preamble .cover .author {
+  margin-top: 1em;
+  font-size: 1.5em;
+}
+.preamble .cover .button-container {
+  margin-top: 2em;
+}
+.preamble .cover .button-container .button {
+  padding: 10px 15px;
+  border: 1px solid #668395;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: #474747;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
+  background: #F2F2F2;
+  transition: background-color 0.2s;
+  margin-bottom: 0.5em;
+  display: inline-block;
+  width: 200px;
+}
+body.dark .preamble .cover .button-container .button {
+  color: #BBB5AC;
+  background: #181A1B;
+}
+.preamble .cover .button-container .button i {
+  margin-right: 1em;
+}
+.preamble .cover .button-container .button:hover {
+  background-color: #e9e9e9;
+}
+body.dark .preamble .cover .button-container .button:hover {
+  background-color: #282828;
+}
+.preamble .rights {
+  margin: 3em 0;
+  margin-top: 8em;
+  width: 25ch;
+  font-size: 90%;
+}
+.preamble .rights div {
+  opacity: 0.5;
+}
+.preamble .rights a img {
+  width: 8em;
+  opacity: 0.5;
+}
+.preamble .rights a:hover img {
+  opacity: 1;
+}
+
+.dedication {
+  font-style: italic;
+  text-align: center;
+  width: 550px;
+  margin: 3em 0;
+}
+
+#extras {
+  display: none;
+}
+
+h2:not(.formkit-overlay h2) {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-size: 110%;
+  font-weight: 700;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+  text-align: center;
+  width: 550px;
+  position: sticky;
+  top: 0;
+  padding-top: 1.3em;
+  padding-bottom: 0.5em;
+  z-index: 2;
+  cursor: pointer;
+}
+
+h1.chapter {
+  text-align: center;
+  font-weight: normal;
+  font-size: 120%;
+  width: 550px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+h1.chapter + .section {
+  margin-top: 0;
+}
+
+h1.chapter + .section h2, h2.bookend {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 200%;
+  font-weight: 400;
+  margin-top: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+div.p {
+  display: flex;
+  align-items: flex-start; /* Align items at the top (optional) */
+  justify-content: space-between; /* Push items to the far ends */
+}
+
+a.s {
+  display: inline-block;
+  margin-left: 5ch;
+  margin-top: 0.5em;
+  top: 50px;
+  font-style: italic;
+  text-align: left;
+  text-decoration: none;
+  color: #474747;
+  width: 25ch;
+  position: sticky;
+  top: 6vh;
+  z-index: 3;
+}
+body.dark a.s {
+  color: #BBB5AC;
+}
+
+.section {
+  counter-reset: custom-counter;
+}
+
+p {
+  text-indent: 2ch;
+  width: 530px;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  position: relative;
+}
+p.li {
+  list-style-type: none;
+  display: list-item;
+  counter-increment: custom-counter;
+  text-indent: 0;
+  padding-left: 3em !important;
+  padding-bottom: 1em;
+  box-sizing: border-box;
+}
+p.li::before {
+  content: counter(custom-counter) ". ";
+  position: absolute;
+  margin-left: -2em;
+}
+
+h2 + div p {
+  text-indent: 0; /* No indent */
+}
+
+/* Adjust positioning for first paragraph of sections to align numbers */
+h2 + div p .paragraph-number {
+  left: -50px; /* Keep first paragraph numbers at default position */
+}
+
+.short-toc {
+  margin-bottom: 2em;
+  width: 550px;
+  min-height: auto;
+  padding: 20px 0;
+}
+
+/* Make the title page less obtrusive */
+.short-toc .preamble {
+  margin-bottom: 20px;
+}
+
+.short-toc .preamble .cover {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.short-toc ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.short-toc li {
+  display: block;
+  padding-left: 4em;
+  cursor: pointer;
+}
+.short-toc li:hover {
+  background: #d6d6d6;
+}
+body.dark .short-toc li:hover {
+  background: #464749;
+}
+.short-toc span {
+  display: inline-block;
+  width: 1.8em;
+  margin-left: -2em;
+  padding-right: 0.2em;
+  text-align: right;
+}
+.short-toc a {
+  width: 1000px;
+  color: #474747;
+  text-decoration: none;
+  font-style: italic;
+}
+body.dark .short-toc a {
+  color: #BBB5AC;
+}
+
+#toc {
+  width: 400px;
+  height: 100vh; /* Full height of the viewport */
+  background-color: rgba(233, 233, 233, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(8px); /* Creates the foggy effect */
+  -webkit-backdrop-filter: blur(8px); /* For Safari support */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  overflow-x: hidden;
+  z-index: 4;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+body.dark #toc {
+  background-color: rgba(40, 40, 40, 0.5); /* Semi-transparent background */
+}
+#toc a {
+  width: 1000px;
+  color: #474747;
+  text-decoration: none;
+  opacity: 0.8; /* Default opacity for all links */
+  padding-left: 1.5em;
+}
+#toc a:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+body.dark #toc a {
+  color: #BBB5AC;
+}
+#toc strong a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 130%;
+  font-optical-sizing: auto;
+  text-transform: uppercase;
+  margin-top: 0.5em;
+  padding-left: 1em;
+  opacity: 1;
+}
+#toc strong.ack a {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+#toc ul {
+  padding-left: 0;
+  width: 390px;
+  overflow: hidden;
+}
+#toc ul li {
+  list-style-type: none;
+  width: 1000px;
+  margin-left: 0;
+  cursor: pointer;
+}
+#toc ul li.current, #toc ul li:hover {
+  background: #d6d6d6;
+  color: #474747;
+}
+body.dark #toc ul li.current, body.dark #toc ul li:hover {
+  background: #464749;
+  color: #BBB5AC;
+}
+#toc ul li.current a, #toc ul li:hover a {
+  opacity: 1;
+}
+#toc ul li.current {
+  background: #dbdcc4;
+}
+body.dark #toc ul li.current {
+  background: #514d3f;
+}
+#toc ul ul {
+  padding-left: 0;
+}
+#toc ul ul li {
+  padding-left: 1.5em;
+}
+#toc ul ul li:before {
+  content: "◇ ";
+  text-indent: 0;
+  opacity: 0.5;
+  position: absolute;
+  left: 1.5em;
+}
+#toc ul ul li a {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 400;
+  font-size: 90%;
+  margin-top: 0;
+  text-transform: none;
+}
+#toc-wrapper {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: -400px;
+  height: 100vh;
+  width: 450px;
+  transition: transform 0.3s ease;
+}
+#toc-wrapper:hover {
+  transform: translateX(400px);
+}
+body.open-toc #toc-wrapper {
+  left: 0;
+}
+body.open-toc #toc-wrapper ul {
+  width: 390px;
+}
+body.open-toc #toc-wrapper:hover {
+  transform: none;
+}
+
+dialog {
+  z-index: 12;
+  color: #474747;
+  background: #F2F2F2;
+  text-align: center;
+}
+dialog p {
+  text-align: center;
+}
+body.dark dialog {
+  color: #BBB5AC;
+  background: #181A1B;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  padding: 0.5em 0;
+  height: 100vh;
+  text-align: center;
+  width: 3rem;
+  background: #F2F2F2;
+}
+#sidebar img {
+  width: 1.5em;
+  height: 1.5em;
+}
+#sidebar a#bifocals-link {
+  display: inline-block;
+  width: 500px;
+  text-align: right;
+  position: absolute;
+  bottom: 1.5em;
+  right: 1em;
+  text-decoration: none;
+}
+#sidebar a#bifocals-link span {
+  visibility: hidden;
+  color: #474747;
+}
+body.dark #sidebar a#bifocals-link span {
+  color: #BBB5AC;
+}
+#sidebar a#bifocals-link:hover span {
+  visibility: visible;
+}
+#sidebar a#bifocals-link:hover img {
+  opacity: 1;
+}
+#sidebar a#bifocals-link img {
+  width: 3em;
+  height: auto;
+  opacity: 0.5;
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+#sidebar a#bifocals-link img:hover {
+  opacity: 1;
+}
+#sidebar a#home-button {
+  margin-bottom: 2em;
+}
+#sidebar button, #sidebar .button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  margin-bottom: 1em;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  opacity: 0.5;
+  padding: 0.5em;
+  padding-bottom: 0.3em;
+}
+#sidebar button:hover, #sidebar button:active, #sidebar .button:hover, #sidebar .button:active {
+  background: #d6d6d6;
+  opacity: 1;
+}
+body.dark #sidebar button:hover, body.dark #sidebar button:active, body.dark #sidebar .button:hover, body.dark #sidebar .button:active {
+  background: #464749;
+}
+body.dark #sidebar button#dark-toggle-button {
+  background: #464749;
+}
+body.open-toc #sidebar button#toc-toggle-button {
+  background: #d6d6d6;
+}
+body.open-toc.dark #sidebar button#toc-toggle-button {
+  background: #464749;
+}
+body.two-cols #sidebar button#col-toggle-button {
+  background: #d6d6d6;
+}
+body.two-cols.dark #sidebar button#col-toggle-button {
+  background: #464749;
+}
+body.dark #sidebar {
+  background: #181A1B;
+}
+body.dark #sidebar button img, body.dark #sidebar .button img, body.dark #sidebar a#bifocals-link img {
+  filter: invert(100%);
+}
+
+#col-1 {
+  width: 95ch;
+  margin: 0 auto;
+}
+
+#col-2 {
+  height: 100vh;
+  overflow-y: auto;
+  width: 95ch;
+}
+
+.header {
+  height: 6vh;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  background: #F2F2F2;
+  z-index: 2;
+}
+
+body.two-cols .footer {
+  height: 4vh;
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  background: #F2F2F2;
+  z-index: 3;
+}
+body.two-cols #col-1 {
+  margin: 0;
+  margin-right: 5rem;
+}
+body.two-cols #col-1 a.s {
+  margin-right: 3rem;
+}
+body.two-cols #col-1 .header, body.two-cols #col-1 .footer {
+  right: 50%;
+}
+body.two-cols #col-2 a.s {
+  margin-left: 0;
+  margin-left: 3rem;
+}
+
+body.dark .header, body.dark .footer {
+  background: #181A1B;
+}
+
+body #left {
+  width: 100%;
+  padding-right: 0;
+}
+body #left .s {
+  order: 2;
+}
+body #left p {
+  order: 1;
+}
+body #right {
+  display: none;
+}
+
+body.two-cols #left {
+  box-sizing: border-box;
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+}
+body.two-cols #left .preamble {
+  justify-content: flex-end;
+}
+body.two-cols #left .preamble .cover {
+  order: 2;
+}
+body.two-cols #left .preamble .rights {
+  order: 1;
+  visibility: hidden;
+}
+body.two-cols #left .s {
+  order: 1;
+  text-align: right;
+}
+body.two-cols #left p {
+  order: 2;
+}
+body.two-cols #left #col-1 > * {
+  margin-left: auto;
+}
+body.two-cols #left #col-1 .chapter > *, body.two-cols #left #col-1 .section > * {
+  margin-left: auto;
+}
+body.two-cols #right {
+  display: block;
+}
+
+#right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+#right .s {
+  order: 2;
+}
+#right p {
+  order: 1;
+}
+
+/* Copy link styles - removed since numbers are now clickable */
+
+/* Paragraph number styles */
+.paragraph-number {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #666;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+/* Adjust positioning for indented paragraphs to align with un-indented ones */
+p:not(h2 + div p) .paragraph-number {
+  left: -70px; /* Move indented paragraph numbers further left to align */
+}
+
+.paragraph-number:hover {
+  opacity: 1;
+}
+
+p:hover .paragraph-number {
+  opacity: 0.8;
+}
+
+body.dark .paragraph-number {
+  color: #666;
+}
+
+/*# sourceMappingURL=style.css.map */
